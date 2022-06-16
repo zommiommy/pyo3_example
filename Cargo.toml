@@ -1,0 +1,19 @@
+[package]
+name = "simple_pkg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+name = "simple_pkg"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.13.2"
+# This settings allows the compiled wheel to work for any
+# python version >= 3.6.
+# While this greatly improves compatibility, it will
+# generate slightly slower packages because we can only
+# use a limited set of APIs
+features = ["extension-module", "abi3-py36"]
