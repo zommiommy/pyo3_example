@@ -86,4 +86,9 @@ maturin build
 ```
 which will create the wheel in `./target/wheels/simple_pkg-0.1.0-cp36-abi3-<YOUR_PLATFORM_TAG>.whl`.
 
+This wheel file can be installed with:
+```bash
+pip install ./target/wheels/simple_pkg-0.1.0-cp36-abi3-<YOUR_PLATFORM_TAG>.whl
+```
+
 If you want to be able to create portable linux wheels you have to use a `ManyLinux2010` docker image.
